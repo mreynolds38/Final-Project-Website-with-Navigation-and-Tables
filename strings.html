@@ -1,0 +1,209 @@
+<!-- 
+    Name: Michael Reynolds
+    Class: Web Development
+    Date: 12/22/2024
+    Assignment: Form Validation with Creative Elements
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name and Zip Code Validator</title>
+    <!-- Added a cool font from Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Made the background a nice gradient color */
+        body {
+            background: linear-gradient(135deg, #87CEEB, #ADD8E6, #B0E0E6);
+            font-family: 'Comic Neue', cursive;
+            text-align: center;
+            margin-top: 50px;
+            min-height: 100vh;
+        }
+
+        /* Made a box for the content with nice shadow */
+        .main-box {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styled the title */
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* Styled input boxes */
+        .input-field {
+            padding: 12px;
+            width: 200px;
+            margin: 10px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            font-family: 'Comic Neue', cursive;
+        }
+
+        /* Styled submit button */
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            margin: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: 'Comic Neue', cursive;
+            font-weight: bold;
+        }
+
+        /* Warning message styling */
+        .warning {
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(231, 76, 60, 0.1);
+        }
+
+        /* Secret message styling */
+        #secretMessage {
+            padding: 25px;
+            margin-top: 25px;
+            background: linear-gradient(45deg, #f1c40f, #f39c12);
+            border-radius: 10px;
+            display: none;
+            color: white;
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+        }
+
+        /* Form layout improvements */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Name and Zip Code Validator</h1>
+    </header>
+
+    <nav>
+        <h2>Navigation</h2>
+        <a href="./landingPage.html">Landing Page</a><br>
+        <a href="./index.html">Home</a><br>
+        <a href="./game.html">Game</a><br>
+        <a href="./strings.html">Strings</a><br>
+        <a href="./boards.html">Objectives/Boards</a><br>
+    </nav>
+
+    <div class="main-box">
+        <!-- Form with all inputs and one submit button -->
+        <form id="validatorForm" onsubmit="return validateInputs(event)">
+            <div class="input-group">
+                <input type="text" id="firstName" name="firstName" class="input-field" placeholder="First Name" required>
+                <input type="text" id="lastName" name="lastName" class="input-field" placeholder="Last Name" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="zipCode" name="zipCode" class="input-field" placeholder="Zip Code" required>
+            </div>
+            <!-- Single submit button -->
+            <button type="submit">Submit Form</button>
+        </form>
+
+        <!-- Warning message display area -->
+        <div id="warningMessage" class="warning"></div>
+
+        <!-- Secret message display area -->
+        <div id="secretMessage"></div>
+    </div>
+
+    <footer>
+        Michael Reynolds<br>
+        University of Advancing Technology<br>
+        2625 W Baseline Rd<br>
+        Tempe, AZ 85283<br>
+    </footer>
+
+    <script>
+        // Function to validate the name length
+        function validateNameLength(firstName, lastName) {
+            const fullName = firstName.trim() + " " + lastName.trim();
+            return fullName.length <= 20;
+        }
+
+        // Function to validate zip code format
+        function validateZipCode(zipCode) {
+            return /^\d{5}$/.test(zipCode);
+        }
+
+        // Function to validate all inputs
+        function validateInputs() {
+            // Get input values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const zipCode = document.getElementById('zipCode').value;
+            const warningDiv = document.getElementById('warningMessage');
+            const secretDiv = document.getElementById('secretMessage');
+
+            // Reset warning and secret message
+            warningDiv.textContent = '';
+            secretDiv.style.display = 'none';
+
+            // If all validations pass, show secret message
+            secretDiv.style.display = 'block';
+            secretDiv.innerHTML = `
+                <h3>🎉 Congratulations ${firstName}!</h3>
+                <p>You've unlocked the secret message:</p>
+                <p style="font-size: 1.2em; color: #2c3e50;">
+                    "The best way to predict the future is to create it! 🚀"
+                </p>
+            `;
+        }
+
+        // Function to reset the form
+        function resetForm() {
+            document.getElementById('firstName').value = '';
+            document.getElementById('lastName').value = '';
+            document.getElementById('zipCode').value = '';
+            document.getElementById('warningMessage').textContent = '';
+            document.getElementById('secretMessage').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,112 @@
+/* Set the main background color to dark blue */
+body {
+    /* Dark blue background for the entire page */
+    background-color: rgb(3, 3, 78);
+    /* Light gray text color for better readability */
+    color: rgb(199, 8, 8);
+    /* Brown border around the body */
+    border-color: brown;
+    /* Remove default margin */
+    margin: 0;
+    /* Add padding around all content */
+    padding: 20px;
+    /* Use Arial font, fallback to any sans-serif */
+    font-family: Arial, sans-serif;
+}
+
+/* Style the navigation menu */
+nav {
+    /* Auto height to fit content */
+    height: auto;
+    /* Fixed width for navigation panel */
+    width: 200px;
+    /* Position nav on the left side */
+    float: left;
+    /* Add space inside nav */
+    padding: 5px;
+    /* Space between lines of text */
+    line-height: 30px;
+    /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Rounded corners */
+    border-radius: 5px;
+}
+
+/* Remove bullets from navigation list */
+nav ul {
+    /* Remove default bullet points */
+    list-style-type: none;
+    /* Remove default padding */
+    padding: 0;
+}
+
+/* Style navigation links */
+nav a {
+    /* White text for links */
+    color: white;
+    /* Remove underline from links */
+    text-decoration: none;
+}
+
+/* Change link color on hover */
+nav a:hover {
+    /* Bright green color when hovering */
+    color: chartreuse;
+}
+
+/* Style the footer section */
+footer {
+    /* Center align footer text */
+    text-align: center;
+    /* Space for navigation on right */
+    margin-right: 200px;
+    /* Bright green text in footer */
+    color: chartreuse;
+    /* Fix footer at bottom of page */
+    position: fixed;
+    bottom: 0;
+    /* Make footer full width */
+    width: 100%;
+    /* Space inside footer */
+    padding: 10px;
+    /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style the header section */
+header {
+    /* Center align header text */
+    text-align: center;
+    /* Dark purple color for header */
+    color: rgb(11, 165, 88);
+    /* Black border around header */
+    border-color: black;
+    /* Space inside header */
+    padding: 20px;
+}
+
+/* Style the objectives section */
+.objectives {
+    /* Space for navigation on left */
+    margin-left: 220px;
+    /* Space inside objectives section */
+    padding: 20px;
+    /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Rounded corners */
+    border-radius: 5px;
+}
+
+/* Style objectives headings */
+.objectives h2 {
+    /* Bright green color for headings */
+    color: chartreuse;
+}
+
+/* Style objectives list */
+.objectives ul {
+    /* White text color */
+    color: white;
+    /* Space between lines */
+    line-height: 1.6;
+}

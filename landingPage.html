@@ -1,0 +1,153 @@
+<!--
+    Date: December 22, 2024
+    Main landing page for the website
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+        .quick-tips {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 90%;
+        }
+        .quick-tips ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .quick-tips li {
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 3px solid #4CAF50;
+            background-color: white;
+        }
+        .quick-tips strong {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Development Learning Resources</h1>
+    </header>
+
+    <nav>
+        <h2>Navigation</h2>
+        <a href="./landingPage.html">Landing Page</a><br>
+        <a href="./index.html">Home</a><br>
+        <a href="./game.html">Game</a><br>
+        <a href="./strings.html">Strings</a><br>
+        <a href="./boards.html">Objectives/Boards</a><br>
+    </nav>
+
+    <main>
+        <h2>Essential Web Development Tools and Resources</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool/Resource</th>
+                    <th>Description</th>
+                    <th>Best For</th>
+                    <th>Learning Curve</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Visual Studio Code</td>
+                    <td>Popular code editor with extensive plugin support</td>
+                    <td>Web Development, JavaScript, Python</td>
+                    <td>Easy</td>
+                </tr>
+                <tr>
+                    <td>Chrome DevTools</td>
+                    <td>Built-in browser developer tools</td>
+                    <td>Debugging, Performance Analysis</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                    <td>Version control and collaboration platform</td>
+                    <td>Code Management, Team Projects</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>MDN Web Docs</td>
+                    <td>Comprehensive web development documentation</td>
+                    <td>Learning, Reference Material</td>
+                    <td>Easy</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section class="quick-tips">
+            <h2>Quick Web Development Tips</h2>
+            <ul>
+                <li><strong>Browser Dev Tools:</strong> Press F12 to access powerful debugging tools</li>
+                <li><strong>Code Organization:</strong> Keep your HTML, CSS, and JavaScript in separate files</li>
+                <li><strong>Version Control:</strong> Commit your changes frequently with clear messages</li>
+                <li><strong>Testing:</strong> Always test your site in multiple browsers</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        Michael Reynolds<br>
+        University of Advancing Technology<br>
+        2625 W Baseline Rd<br>
+        Tempe, AZ 85283<br>
+    </footer>
+</body>
+</html>
